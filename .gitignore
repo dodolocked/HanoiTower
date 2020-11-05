@@ -50,3 +50,23 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#include<stdio.h>
+int hanio(int x);
+int main(){
+      int n,y;
+      scanf("%d",&n);
+      y=hanio(n);
+      printf("%d",y);
+      return 0;
+}
+int hanio(int x){
+      int sum;
+      if(x==1){
+            sum=1;
+      }
+      else{
+            sum=hanio(x-1)*2+1;
+      }
+      return sum;
+}
